@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { BrowserRouter, Routes, Route, Link, useNavigate } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Link, useNavigate, Outlet, useLocation } from 'react-router-dom'
 import { api } from './lib/api'
 
 function LangSwitcher({ value, onChange }) {
@@ -64,8 +64,6 @@ function Layout({ lang, onLang }) {
     </div>
   )
 }
-
-import { Routes, Route, Outlet, useLocation } from 'react-router-dom'
 
 function useLangRouting() {
   const loc = useLocation()
